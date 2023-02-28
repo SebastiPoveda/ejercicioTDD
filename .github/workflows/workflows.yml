@@ -37,9 +37,10 @@ jobs:
           
       - name: Install virtualenv and execute pytest
         run: |
-          virtualenv -p python3.8 env
+          pip install virtualenv
+          virtualenv env
           source env/bin/activate
-          sudo apt install python-pytest
+          pip install python-pytest
           pytest
           
       - name: Configure AWS Credentials
