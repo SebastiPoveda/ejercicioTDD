@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "app_function": "apps.f",
+        "keep_warm": false,
+        "role_name": "LabRole",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "manage_roles": false,
+        "apigateway_enabled": false,
+        "project_name": "ejerciciotdd",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-37olsh1ct"
+        "events": [{
+            "function": "apps.f",
+            "event_source": {
+                  "arn":  "arn:aws:s3:::bucketdd",
+                  "events": [
+                    "s3:ObjectCreated:*" // Supported event types: http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#supported-notification-event-types
+                  ]    
+               }
+            }]
+    }
+}
