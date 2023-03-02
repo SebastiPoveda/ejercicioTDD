@@ -9,6 +9,6 @@ def menor(lista):
             menor = a
     return menor
     
-numeros = [2,31,8,4,0]
+numeros = [2,31,8,4,1]
 
 print(menor(numeros))
