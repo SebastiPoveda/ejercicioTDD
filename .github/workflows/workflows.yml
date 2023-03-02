@@ -57,7 +57,7 @@ jobs:
         run: |
           aws s3 cp funcion.py  s3://bucketdd/funcion.py
       
-      - name: test aws cli
+      - name: zappa
         run: |
           zappa update dev
           zappa invoke apps.f
